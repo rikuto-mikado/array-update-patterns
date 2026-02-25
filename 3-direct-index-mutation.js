@@ -1,1 +1,1 @@
-
+const { products, targetId, updatedPRoduct } = require("./data");
