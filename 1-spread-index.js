@@ -1,8 +1,11 @@
-const { products, tagetId, updatedProduct } = require("./data");
+const { products, targetId, updatedProduct } = require("./data");
 
-const index = products.findIndex(p => p.id === targetId);
-const updated = [...products];
-updated[index] = updatedProduct;
+function updatedProduct(items, id, newProduct) {
+    const index = items.findIndex(p => p.id === id);
+    const updated = [...items];
+    updated[index] = newProduct;
+    return updated;
+}
 
-console.log("Before update:", products);
-console.log("After update:", updated);
+const result = updatedProduct(products, targetId, updatedProduct);
+console.log(result);
