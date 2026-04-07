@@ -1,4 +1,3 @@
-
 const { products, targetId, updatedProduct } = require("./data");
 
 function updatedProduct(items, id, newProduct) {
